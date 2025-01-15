@@ -1,3 +1,19 @@
+# Python-specific files
+_pycache_/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+.venv/
+.ipynb_checkpoints
+.pytest_cache/
+.mypy_cache/
+*.sqlite3
+.vscode/
+.idea/
+*.log
+
+# R-specific files
 # History files
 .Rhistory
 .Rapp.history
