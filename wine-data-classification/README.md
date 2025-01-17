@@ -99,7 +99,8 @@ install.packages(c("rpart", "rpart.plot", "knitr", "kableExtra"))
 | Pruned (Gini)       | 80.92%          |
 
 - The pruned decision tree using the **Information Criterion** performed the best in terms of testing accuracy (83.01%).
-- **Alcohol content** emerged as the most influential feature in predicting wine quality.
+- **Preferred Model**: The pruned decision tree using the Gini index is preferred for its balance between accuracy and simplicity.
+- **Most Important Variable**: **Alcohol content** emerged as the most influential feature in predicting wine quality.
 
 ---
 
