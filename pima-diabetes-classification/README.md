@@ -104,11 +104,6 @@ To run this project, you will need:
 
 ---
 
-## Insights
-This project serves as a foundational exercise in supervised learning, providing hands-on experience in data preprocessing, EDA, and model evaluation. The simplicity of the dataset highlights the importance of feature selection and the trade-offs between model interpretability and complexity.
-
----
-
 ## Future Improvements
 - Explore additional algorithms like Random Forest or Logistic Regression.
 - Perform hyperparameter tuning for the Decision Tree model.
