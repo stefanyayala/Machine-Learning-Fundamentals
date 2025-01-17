@@ -1,0 +1,158 @@
+---
+title: "Pima Indian Diabetes Analysis"
+author: "Stefany Ayala"
+output: html_document
+---
+
+# Introduction
+The objective of this analysis is to explore, clean, and prepare the **Pima Indian Diabetes dataset** for modeling. This report demonstrates the application of data cleaning, visualization, and machine learning techniques in R. Additionally, we compare the performance of two algorithms to showcase modeling versatility.
+
+---
+
+# 1. Data Loading
+We first load the data directly from a URL into R and inspect its structure.
+
+```{r, message=FALSE}
+# Load necessary libraries
+library(ggplot2)
+library(OneR)
+library(rpart)
+
+# Load the dataset
+url <- "https://drive.google.com/uc?id=1MvxSOTYHknWFIukVGaEzR79-cLX_JHMC&export=download"
+diabetes <- read.csv(url)
+
+# Inspect dataset structure
+dim(diabetes)  # Dimensions of the dataset
+attributes(diabetes)  # Attributes of the dataset
+```
+# 2. Data Exploration
+## 2.1 Column Renaming
+For better readability, we rename the columns.
+
+```{r, message=FALSE}
+# Rename columns
+colnames(diabetes) <- c('pregnant', 'glucose', 'bp', 'triceps', 'insulin', 'bmi',
+                        'diabetes', 'age', 'target')
+```
+## 2.2 Initial Data Insights
+We explore the dataset's variables with histograms and basic descriptive statistics.
+
+```{r, message=FALSE}
+# Visualize data distributions
+par(mfrow = c(3, 3))
+for (col in names(diabetes)[-9]) {
+  hist(diabetes[[col]], main = paste("Histogram of", toupper(col)), xlab = toupper(col))
+}
+
+# Summarize descriptive statistics
+summary(diabetes)
+```
+
+# 3. Data Cleaning
+## 3.1 Detecting and Handling Outliers
+Outliers are detected using Tukey’s method and replaced with NA.
+
+```{r, message=FALSE}
+# Handle outliers
+clean_data <- diabetes
+for (col in names(diabetes)[-9]) {
+  outliers <- boxplot.stats(diabetes[[col]])$out
+  clean_data[[col]] <- ifelse(diabetes[[col]] %in% outliers, NA, diabetes[[col]])
+}
+```
+## 3.2 Imputing Missing Values
+Missing values are replaced with the mean of each variable.
+
+```{r, message=FALSE}
+# Impute missing values with the mean
+clean_data <- as.data.frame(lapply(clean_data, function(x)
+  ifelse(is.na(x), mean(x, na.rm = TRUE), x)))
+
+# Verify no missing values remain
+sum(is.na(clean_data))
+```
+
+# 4. Data Preparation
+The cleaned dataset is split into training (80%) and testing (20%) sets.
+```{r, message=FALSE}
+# Split data
+set.seed(123)
+train_indices <- sample(1:nrow(clean_data), size = 0.8 * nrow(clean_data))
+TrainData <- clean_data[train_indices, ]
+TestData <- clean_data[-train_indices, ]
+```
+
+# 5. Modeling
+Interpretation
+
+- **OneR Model:**
+
+This simple model provides interpretable rules based on a single attribute, which can be ideal for quick insights.
+The model's performance metrics indicate its effectiveness in this context.
+
+- **Decision Tree Model:**
+
+The confusion matrix reveals the strengths and weaknesses in classification.
+Decision Trees, though more complex, offer better granularity in predictions.
+
+By comparing the results of both models, we gain insights into the trade-offs between model simplicity and performance.
+
+## 5.1 OneR Model
+We train a OneR model to identify the best attribute and evaluate its performance.
+```{r, message=FALSE}
+# Train a OneR model
+one_r_model <- OneR(target ~ ., data = TrainData, verbose = TRUE)
+
+# Summarize the model
+summary(one_r_model)
+
+# Predict on test data
+one_r_predictions <- predict(one_r_model, TestData)
+
+# Evaluate the model
+one_r_eval <- eval_model(one_r_predictions, TestData)
+one_r_eval
+```
+
+## 5.2 Decision Tree Model
+As a comparison, we train a Decision Tree model and evaluate its performance.
+```{r, message=FALSE}
+# Train a decision tree model
+tree_model <- rpart(target ~ ., data = TrainData, method = "class")
+
+# Predict on test data (specifying 'type = "class"' to get class labels)
+tree_predictions <- predict(tree_model, TestData, type = "class")
+
+# Confusion matrix
+confusion_matrix <- table(Predicted = tree_predictions, Actual = TestData$target)
+confusion_matrix
+```
+
+# 6. Results and Evaluation
+## 6.1 OneR Model Results
+The OneR model was trained on the dataset to identify the best single predictor of the target variable. The OneR model achieves an accuracy of **75.24%** based on the rule for the `glucose` variable. The model divides the `glucose` variable into ranges and predicts the target variable based on these ranges.
+
+The confusion matrix is as follows:
+
+```{r, message=FALSE}
+
+# Display evaluation metrics
+one_r_eval
+```
+From the confusion matrix, we can see that the OneR model has some false positives and false negatives, but it is still fairly accurate for this task.
+
+## 6.2 Decision Tree Model Results
+To compare the performance of a more complex algorithm, a Decision Tree model was trained. Its predictions on the test data are evaluated using a confusion matrix:
+
+```{r, message=FALSE}
+# Confusion matrix for Decision Tree model
+confusion_matrix <- table(tree_predictions, TestData$target)
+
+# Display confusion matrix
+confusion_matrix
+```
+The Decision Tree model is capable of capturing more complex relationships in the data compared to the OneR model, though it also has some misclassifications.
+
+# Final thoughs
+Both models show reasonable accuracy, but the OneR model is simpler and more interpretable. The Decision Tree model, while more complex, may be more suitable for capturing non-linear patterns. Further experimentation, such as cross-validation and hyperparameter tuning, could lead to improved performance.
