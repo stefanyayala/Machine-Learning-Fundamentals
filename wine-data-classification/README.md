@@ -115,11 +115,3 @@ Below is an example of an enhanced visualization:
 2. Add precision, recall, and F1-score for a more comprehensive evaluation.
 3. Apply hyperparameter tuning to optimize decision tree parameters.
 4. Experiment with additional datasets for generalization.
-
----
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
