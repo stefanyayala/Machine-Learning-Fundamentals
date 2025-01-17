@@ -106,7 +106,7 @@ install.packages(c("rpart", "rpart.plot", "knitr", "kableExtra"))
 ## Example Visualizations
 Below is an example of an enhanced visualization:
 
-![Pruned Decision Tree (Info)](visualizations/pruned_info_tree.png)
+![Pruned Decision Tree (Gini)](wine-data-classification/prune-decision-tree-gini.png)
 
 ---
 
