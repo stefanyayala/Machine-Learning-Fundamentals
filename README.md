@@ -1,4 +1,4 @@
-# Machine-Learning-Fundamentals
+# Machine-Learning-Projects
 This repository is a collection of my data science and machine learning projects using R and Python. The projects demonstrate various techniques and algorithms applied to different datasets. They include:  
 - Supervised learning (e.g., regression, classification)  
 - Unsupervised learning (e.g., clustering)  
