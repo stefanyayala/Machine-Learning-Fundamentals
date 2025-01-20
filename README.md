@@ -10,14 +10,14 @@ Below is an overview of the projects contained in this repository:
 ## Projects
 
 ### 1. **[Carseats Predictive Models](carseats-predictive-models/README.md)**
-This project involves building predictive models to estimate sales based on various features like price, advertising budget, and location. The goal is to predict car seat sales in different markets using regression techniques. The analysis includes data preprocessing, model training, testing, and evaluation, with a focus on interpreting model results for business decisions.
+This project involves building predictive models to estimate car seat sales based on various features such as price, advertising budget, and location. The goal is to predict car seat sales across different markets using classification techniques. The analysis includes data preprocessing, model training, testing, and evaluation, with a focus on interpreting model results for business decisions.
 
 **Key Concepts**:
 - Predictive modeling
-- Linear regression
-- Feature selection and importance
-- Model evaluation
-
+- Random Forest, Naïve Bayes, and Decision Tree classification
+- Model evaluation using metrics like accuracy and gain charts
+- K-Nearest Neighbors (KNN) for classification
+- Feature normalization and tuning KNN hyperparameters
 ---
 
 ### 2. **[Wine Quality Prediction](wine-data-classification/README.md)**
