@@ -71,13 +71,6 @@ The goal of this analysis is to build a model that predicts whether sales are hi
 - **Confusion Matrix**: The confusion matrix is used to measure the performance of each model, focusing on false positives and false negatives.
 - **Gain Charts**: Gain charts are plotted to visually compare the effectiveness of the models in classifying high vs. low sales.
 
-## File Structure
-
-- **README.md**: This README file providing an overview of the project.
-- **carseats_data.rdata**: The R data file containing the dataset for analysis.
-- **Analysis.Rmd**: The RMarkdown file containing the full analysis, model building, and evaluation code.
-- **output.html**: The HTML file generated from the RMarkdown analysis, containing detailed results and visualizations.
-
 ## Dependencies
 
 To run the analysis, the following R packages are required:
