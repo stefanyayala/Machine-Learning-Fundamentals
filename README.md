@@ -1,8 +1,8 @@
 # Machine-Learning-Projects
 
 Welcome to the **Machine Learning Projects Repository**! This repository contains various machine learning projects showcasing fundamental and advanced concepts in predictive modeling, classification, and data analysis. The projects included in this repository utilize a variety of datasets, algorithms, and evaluation techniques, offering a hands-on approach to understanding key principles of machine learning. Key topics:  
-- Supervised learning (e.g., regression, classification)  
-- Unsupervised learning (e.g., clustering)  
+- Supervised learning  
+- Unsupervised learning
 - Decision trees and classification models  
 
 Below is an overview of the projects contained in this repository:
