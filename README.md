@@ -6,6 +6,8 @@ This repository is a collection of my data science and machine learning projects
 
 In R, these projects are built using packages like caret, rpart, and randomForest. In Python, I am transitioning to frameworks like PyTorch, scikit-learn, and pandas.
 
+## -- Project Status: Active
+
 ### Features  
 1. *Reproducible Code*: Clean, modular scripts in R and Python.  
 2. *Learning Resources*: Examples of regression, classification, and clustering.  
