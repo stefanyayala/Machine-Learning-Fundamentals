@@ -96,7 +96,7 @@ install.packages(c("randomForest", "klaR", "caret", "ROCR", "e1071", "rpart", "M
    - The dataset is automatically loaded from the `carseats_data.rdata` file.
    
 2. Run the analysis:
-   - Open the `Analysis.Rmd` file and knit it to generate the output report (HTML file).
+   - Open the `carseats-prediction.Rmd` file and knit it to generate the output report (HTML file).
    
 3. Interpret the results:
    - The output HTML file will contain all the analysis, model evaluations, and visualizations.
