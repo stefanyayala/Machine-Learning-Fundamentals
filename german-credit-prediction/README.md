@@ -47,8 +47,8 @@ The project is implemented using R Markdown and incorporates data preprocessing,
 - Compared feature importance for both models.
 
 ## Results
-- **Decision Tree Accuracy**: ~68.7%
-- **Random Forest Accuracy**: ~71.2%
+- **Decision Tree Accuracy**: ~71.2%
+- **Random Forest Accuracy**: ~74.8%
 - **Key Predictors**:
   - Checking account status (`CHK_ACCT`)
   - Credit amount (`AMOUNT`)
