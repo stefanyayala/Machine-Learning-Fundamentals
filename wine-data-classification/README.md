@@ -1,4 +1,4 @@
-# Wine Quality Prediction using Decision Trees
+# Wine Quality Prediction
 
 ## Overview
 This project analyzes a wine dataset to classify wine quality using decision trees. The analysis includes splitting the dataset into training and testing sets, building and evaluating decision trees using both "information" and "gini" splitting criteria, pruning the trees for improved generalization, and deriving insights from the most important variables. Enhanced visualizations are provided to make decision-making processes clear to stakeholders.
