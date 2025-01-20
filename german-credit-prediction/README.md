@@ -1,4 +1,4 @@
-# Predicting Customer Credit Risk with Decision Trees and Random Forests
+# Predicting Customer Credit Risk
 
 ## Project Overview
 This project demonstrates a predictive analysis pipeline aimed at assessing customer credit risk using the German Credit dataset. The analysis focuses on binary classification to identify creditworthiness (Good vs. Bad) based on various socio-economic and credit-related factors.
@@ -74,7 +74,7 @@ The project is implemented using R Markdown and incorporates data preprocessing,
    ```R
    install.packages(c("readxl", "ggplot2", "rpart", "rpart.plot", "randomForest", "dplyr", "kableExtra", "gridExtra"))
    ```
-3. Open the `german-credit-analysis.Rmd` file in RStudio.
+3. Open the `german-credit-prediction.Rmd` file in RStudio.
 4. Run all code chunks or knit the file to HTML/PDF.
 
 ## Future Work
