@@ -68,7 +68,7 @@ To run any of the projects in this repository, you will need the following:
 To get started, clone the repository using the following command:
 
 ```bash
-git clone https://github.com/your-username/Machine-Learning-Projects.git
+git clone https://github.com/stefanyayala/Machine-Learning-Projects-Rstudio.git
 ```
 
 Navigate to the project directory you're interested in and follow the instructions in the respective project README files.
@@ -89,13 +89,13 @@ We welcome contributions to enhance and expand this repository! If you'd like to
 
 ## License
 
-This repository is licensed under the MIT License. See the LICENSE file for more details.
+This repository is licensed under the MIT License.
 
 ---
 
 ## Acknowledgments
 
-We would like to thank the contributors of the datasets used in these projects:
+i would like to thank the contributors of the datasets used in these projects:
 
 - **Carseats Dataset**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Car+Evaluation)
 - **Wine Quality Dataset**: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Wine+Quality)
