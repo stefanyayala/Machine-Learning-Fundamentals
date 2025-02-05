@@ -5,7 +5,7 @@ Welcome to the **Machine Learning Projects Repository**! This repository contain
 - Unsupervised learning
 - Decision trees and classification models  
 
-Below is an overview of the projects contained in this repository:
+These projects were developed throughout 2023-2024. Below is an overview of the projects contained in this repository:
 
 ## Projects
 
