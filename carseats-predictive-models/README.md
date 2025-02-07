@@ -99,7 +99,7 @@ install.packages(c("randomForest", "klaR", "caret", "ROCR", "e1071", "rpart", "M
    - Open the `carseats-prediction.Rmd` file and knit it to generate the output report (HTML file).
    
 3. Interpret the results:
-   - The output HTML file will contain all the analysis, model evaluations, and visualizations.
+   - The output MD file will contain all the analysis, model evaluations, and visualizations.
    - Key insights, including the best-performing model and recommendations, will be highlighted.
 
 ## Conclusion
