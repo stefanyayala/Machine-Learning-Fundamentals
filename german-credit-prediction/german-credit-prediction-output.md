@@ -1,4 +1,4 @@
-Predicting Customer Credit Risk with Decision Trees and Random Forests
+Predicting Customer Credit Risk
 ================
 Stefany Ayala
 
